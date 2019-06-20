@@ -1,0 +1,177 @@
+<pop3:connector name="pop3"/>
+
+<flow name="list">
+    <pop3:inbound-endpoint checkFrequency="100" user="bob" password="password" host="pop.example.com" port="995"/>
+</flow>
+
+<amqp:connector name="AMQP_Config"
+     fallbackAddresses="192.168.0.1,192.168.0.2"
+     virtualHost="/"
+     username="guest"
+     password="guest"
+	 deliveryMode="TRANSIENT"
+	 priority="1"
+	 ackMode="AUTO"
+	 activeDeclarationsOnly="false"
+	 mandatory="false"
+	 immediate="false"
+	 prefetchSize="16"
+	 prefetchCount="16"
+	 noLocal="false"
+	 exclusiveConsumers="false"
+	 requestBrokerConfirms="false"
+	 numberOfChannels="10"
+	  />
+
+<db:derby-config name="DerbyConfig" url="derbydatabase.com/MydatabaseTest"/>
+
+<file:connector name="file_config_default"
+ autoDelete="true"
+ streaming="true"
+ validateConnections="true" />
+
+ <ftp:inbound-endpoint host="localhost"
+ port="21" path="path/to/file"
+ user="myusername" password="maypassword"
+ pollingFrequency="4000" responseTimeout="10000"  metadata:id="5571009e-a278-4a01-ac1d-4102113b52ad"
+ doc:name="FTP">
+    <reconnect-forever frequency="3000"/>
+</ftp:inbound-endpoint>
+
+<sftp:inbound-endpoint host="localhost"
+ port="22" path="path/to/file"
+ user="myuser" password="mypassword"
+ responseTimeout="10000"
+ pollingFrequency="2000" fileAge="50"
+ sizeCheckWaitTime="10" doc:name="SFTP"/>
+
+ <flow name="greetings">
+  <http:listener path="greet" method="POST"/>
+  <set-payload value="Hello #[payload.name]" />
+  <ftp:outbound-endpoint path="greet.txt" connector-ref="file" />
+</flow>
+
+<flow name="sftpSeqNumberOutbound">
+    <sftp:outbound-endpoint
+        address="sftp://.../data"
+        outputPattern="fileName.dat" duplicateHandling="addSeqNo"/>
+</flow>
+
+<http:listener-config name="listenerConfig" host="localhost" port="8081" basePath="api/v2" protocol="HTTPS">
+  <tls:context>
+    <tls:trust-store path="cacerts.jks" password="changeit"/>
+    <tls:key-store path="keystore.jks" keyPassword="changeit" password="changeit"/>
+  </tls:context>
+</http:listener-config>
+
+<http:request-config name="requestConfig" host="localhost" port="8081" protocol="HTTPS" enableCookies="false">
+  <tls:context>
+    <tls:trust-store path="trustStore" password="changeit"/>
+    <tls:key-store path="clientKeystore" keyPassword="changeit" password="changeit"/>
+  </tls:context>
+</http:request-config>
+
+<imap:connector name="imap" checkFrequency="100"/>
+
+<jms:connector name="JMS_Config"
+     acknowledgementMode="DUPS_OK_ACKNOWLEDGE"
+     clientId="myClient"
+     durable="true"
+     noLocal="true"
+     persistentDelivery="true"
+     maxRedelivery="5"
+     cacheJmsSessions="true"
+     eagerConsumer="false"
+     specification="1.1"
+     numberOfConsumers="7"
+     username="myuser"
+     password="mypass" />
+
+<jms:activemq-connector name="jmsConnector" connectionFactory-ref="connectionFactory"/>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:oauth2-provider="http://www.mulesoft.org/schema/mule/oauth2-provider"
+      xmlns:http="http://www.mulesoft.org/schema/mule/http"
+      xsi:schemaLocation=
+        "http://www.mulesoft.org/schema/mule/oauth2-provider http://www.mulesoft.org/schema/mule/oauth2-provider/current/mule-oauth2-provider.xsd
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+
+    <oauth2-provider:config name="OAuth2Provider"
+                            providerName="Test OAuth2Provider"
+                            loginPage="static/auth.html"
+                            authorizationEndpointPath="authorize"
+                            accessTokenEndpointPath="token"
+                            host="localhost"
+                            port="8081"
+                            resourceOwnerSecurityProvider-ref="resourceOwnerSecurityProvider"
+                            clientSecurityProvider-ref="clientSecurityProvider"
+                            clientStore-ref="clientStore"
+                            tokenStore-ref="tokenStore"
+                            authorizationCodeStore-ref="authorizationCodeStore"
+                            rateLimiter-ref="rateLimiter"
+                            scopes="GUEST USER ADMIN"
+                            defaultScopes="USER"
+                            supportedGrantTypes="${allSupportedGrantTypes}"
+                            authorizationTtlSeconds="600"
+                            tokenTtlSeconds="86400"
+                            refreshTokenTtlSeconds="-1"
+                            enableRefreshToken="true"
+                            issueNewRefreshToken="true">
+
+        <oauth2-provider:clients>
+            <oauth2-provider:client clientId="clientId1"
+                                    secret="clientSecret1"
+                                    principal="clusr"
+                                    type="CONFIDENTIAL">
+                <oauth2-provider:redirect-uris>
+                    <oauth2-provider:redirect-uri>
+                        http://fake/redirect
+                    </oauth2-provider:redirect-uri>
+                </oauth2-provider:redirect-uris>
+                <oauth2-provider:authorized-grant-types>
+                    <oauth2-provider:authorized-grant-type>
+                        AUTHORIZATION_CODE
+                    </oauth2-provider:authorized-grant-type>
+                </oauth2-provider:authorized-grant-types>
+            </oauth2-provider:client>
+        </oauth2-provider:clients>
+    </oauth2-provider:config>
+</mule>
+
+<smtp:connector name="smtp"/>
+
+<smtps:connector name="tls">
+    <smtps:tls-client path="aKeystore" storePassword="password"/>
+    <smtps:tls-trust-store path="aTruststore" storePassword="changeit"/>
+</smtps:connector>
+
+<amqp:connector name="AMQP_Config"
+     fallbackAddresses="192.168.0.1,192.168.0.2"
+     virtualHost="/"
+     username="guest"
+     password="guest"
+	 deliveryMode="TRANSIENT"
+	 priority="1"
+	 ackMode="AUTO"
+	 activeDeclarationsOnly="false"
+	 mandatory="false"
+	 immediate="false"
+	 prefetchSize="16"
+	 prefetchCount="16"
+	 noLocal="false"
+	 exclusiveConsumers="false"
+	 requestBrokerConfirms="false"
+	 numberOfChannels="10"
+	  />
+
+<file:connector name="file_config_default"
+ autoDelete="true"
+ streaming="true"
+ validateConnections="true" />
+
+ 
+
+
+
