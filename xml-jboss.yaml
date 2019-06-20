@@ -1,0 +1,34 @@
+name: xml-jboss
+filetype: xml$
+target: file
+type: simple-text
+advice: The community maintained JBoss buildpack (https://github.com/cloudfoundry-community/jboss-buildpack)
+  is a fork of the Java buildpack (https://github.com/cloudfoundry/java-buildpack).
+  As facets of the JBoss buildpack are discussed, there may be many things that are
+  identical or similar when compared to the original Java buildpack. Refer to cookbook
+  URIs
+effort: 50
+readiness: 5
+category: Jboss
+tags:
+- value: jboss
+- value: javaee
+- value: api
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/jbossbuildpackcustomizationguide/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/jbossdistroconfigandminimize/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/migratingjavaeeappstothecloud/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/jbossbp-userguide/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/message-driven-beans/
+patterns:
+- value: jaws.xml
+  tag: entity-beans
+- value: jboss.xml
+- value: jbosscmp-jmodelc.xml
+  tag: fullprofile
+- value: jboss-service.xml
+  tag: config
+- value: jboss-web.xml
+  tag: webapp
+- value: jboss-wsse-server.xml
+  tag: security

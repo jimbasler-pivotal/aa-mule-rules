@@ -1,0 +1,13 @@
+name: xml-mule4-db
+filetype: xml$
+target: line
+type: contains
+advice: Ensure appropriate egress policies are set for database connectivity
+effort: 0
+readiness: 10
+category: datasource
+tags:
+- value: api
+- value: database
+patterns:
+- value: <db:config

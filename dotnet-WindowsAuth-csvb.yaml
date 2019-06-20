@@ -1,0 +1,10 @@
+name: dotnet-WindowsAuth-csvb
+filetype: (cs$|vb$)
+target: line
+type: contains
+advice: Ensure compatible configuation
+effort: 1000
+readiness: 1000
+category: Unsupported modules
+patterns:
+- value: GetSection(system.webServer/security/authentication/windowsAuthentication

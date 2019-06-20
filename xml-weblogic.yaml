@@ -1,0 +1,26 @@
+name: xml-weblogic
+filetype: xml$
+target: file
+type: simple-text
+advice: Convert to Spring based application configuration
+effort: 100
+readiness: 100
+category: webLogic
+tags:
+- value: api
+- value: weblogic
+- value: javaee
+- value: fullprofile
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/code-organization/fast-props-config-server/
+patterns:
+- value: weblogic.xml
+- value: weblogic-cmp-rmodelms-jar.xml
+- value: weblogic-ejb-jar.xml
+- value: weblogic-ra.xml
+- value: persistence-configuration.xml
+- value: weblogic-webservices.xml
+- value: weblogic-wsee-clientHandlerChain.xml
+- value: webservice-policy-ref.xml
+- value: weblogic-wsee-standaloneclient.xml
+- value: weblogic-application.xml

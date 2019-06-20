@@ -1,0 +1,19 @@
+name: xml-mule3-ftp
+filetype: xml$
+target: line
+type: contains
+advice: Ensure appropriate egress policies or port mappings are set for FTP connectivity. Ensure any configured temp directories are valid.
+effort: 0
+readiness: 10
+category: file
+tags:
+- value: api
+- value: file
+- value: ftp
+patterns:
+- value: <ftp:inbound-endpoint
+- value: <sftp:inbound-endpoint
+- value: <ftp:connector
+- value: <sftp:connector
+- value: <ftp:outbound-endpoint
+- value: <sftp:outbound-endpoint

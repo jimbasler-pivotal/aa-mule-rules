@@ -1,0 +1,14 @@
+name: xml-servlet-2-5
+filetype: xml$
+target: line
+type: contains
+advice: Refer to PCF documetation
+effort: 400
+readiness: 500
+category: servlet
+tags:
+- value: api
+- value: servlet
+- value: webcontainer
+patterns:
+- value: web-app_2_5.xsd

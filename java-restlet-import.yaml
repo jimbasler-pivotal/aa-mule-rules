@@ -1,0 +1,20 @@
+name: java-restlet-import
+filetype: (jsp$|java$)
+target: line
+type: regex
+defaultpattern: ^.*import(\s*|=")%s.*$
+advice: The Restlet library appears to be dead at this point in time. It is for this
+  reason the recommendation going forward is to migrate these applications to Spring
+  MVC. Refer to cookbook URI
+effort: 10
+readiness: 7
+category: restlet
+tags:
+- value: api
+- value: rest
+- value: json
+- value: restlet
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/spring/migrate_restlet_to_spring_mvc/
+patterns:
+- value: org.restlet

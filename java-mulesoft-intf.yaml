@@ -1,0 +1,21 @@
+name: java-mulesoft-intf
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ {].*
+advice: Refer to cookbook URIs
+effort: 10
+readiness: 10
+category: etl
+tags:
+- value: api
+- value: mule
+- value: api-gateway
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/cxf-webservice/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/mule-to-pcf/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/mule-soft/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/spring/muletospringboot/
+patterns:
+- value: AbstractMessageTransformer
+- value: AbstractTransformer

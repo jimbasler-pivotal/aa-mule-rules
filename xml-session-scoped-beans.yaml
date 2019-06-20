@@ -1,0 +1,14 @@
+name: xml-session-scoped-beans
+filetype: xml$
+target: line
+type: contains
+advice: Review usage and determine if externalizing session state will resolve.
+effort: 100
+readiness: 100
+category: session
+tags:
+- value: api
+- value: stateful
+- value: session
+patterns:
+- value: scope="session"

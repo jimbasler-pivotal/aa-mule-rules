@@ -1,0 +1,23 @@
+name: java-rabbitmq-import
+filetype: (jsp$|java$)
+target: line
+type: regex
+defaultpattern: ^.*import(\s*|=")%s.*$
+advice: Refer to PCF/Spring documentation for remediation
+effort: 5
+readiness: 5
+category: mq
+tags:
+- value: messaging
+- value: api
+- value: amqp
+- value: rabbitmq
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/general/mdbmigration/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/general/configurerabbitmq/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/modernization/rabbitmq-heartbeat/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/backing-services-port-binding/test_rabbitmq/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/telemetry/monitoring_rabbit/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/day2-ops/rabbitmq-retry/
+patterns:
+- value: com.rabbitmq

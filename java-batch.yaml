@@ -1,0 +1,44 @@
+name: java-batch
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ (].*
+advice: Remove jndi provider or move to PKS
+effort: 10
+readiness: 7
+category: jndi
+tags:
+- value: api
+- value: lookup
+- value: jndi
+- value: webcontainer
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/general/remove-jndi-provider-dependency-7d975db1628925439d32eb51783830f3/
+patterns:
+- value: NamingEnumeration
+- value: NameClassPair
+- value: NameParser
+- value: DirContext
+- value: BinaryRefAddr
+- value: CompositeName
+- value: CompoundName
+- value: InitialContext
+- value: LinkRef
+- value: NameClassPair
+- value: RefAddr
+- value: StringRefAddr
+- value: BasicControl
+- value: ControlFactory
+- value: InitialLdapContext
+- value: LdapName
+- value: ManageReferralControl
+- value: PagedResultsControl
+- value: PagedResultsResponseControl
+- value: SortControl
+- value: SortKey
+- value: SortResponseControl
+- value: StartTlsRequest
+- value: StartTlsResponse
+- value: UnsolicitedNotificationEvent
+- value: NamingEvent
+- value: NamingExceptionEvent

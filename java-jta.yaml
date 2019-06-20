@@ -1,0 +1,39 @@
+name: java-jta
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ (.{].*
+advice: Distributed transcations are problematic and should be remediated.
+effort: 50
+readiness: 6
+category: jta
+tags:
+- value: api
+- value: jta
+- value: webprofile
+recipes:
+- uri: https://www.javaworld.com/article/2077963/open-source-tools/distributed-transactions-in-spring--with-and-without-xa.html
+- uri: https://app-transformation-cookbook-internal.cfapps.io/modernization/xatrans/
+- uri: http://cloud.rohitkelapure.com/2017/09/what-to-do-with-xa-global-transactions.html
+patterns:
+- value: UserTransaction
+- value: InvalidTransactionException
+- value: TransactionRequiredException
+- value: TransactionRollemodelackException
+- value: TransactionManager
+- value: TransactionSynchronizationRegistry
+- value: UserTransaction
+- value: HeuristicCommitException
+- value: HeuristicMixedException
+- value: HeuristicRollbackException
+- value: InvalidTransactionException
+- value: NotSupportedException
+- value: RollbackException
+- value: TransactionalException
+- value: TransactionRequiredException
+- value: TransactionRollemodelackException
+- value: XAResource
+- value: Xid
+- value: XAException
+- value: enlistForDurableTwoPhase
+- value: enlistForVolatileTwoPhase

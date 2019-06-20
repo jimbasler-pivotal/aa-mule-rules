@@ -1,0 +1,17 @@
+name: java-MBeans
+filetype: java$
+target: line
+type: contains
+advice: MBean is application server specific, change to current server equivalent
+  or consider PKS
+effort: 100
+readiness: 10
+category: websphere
+tags:
+- value: mbeans
+- value: jmx
+- value: websphere
+- value: admin
+- value: api
+patterns:
+- value: 'WebSphere:'

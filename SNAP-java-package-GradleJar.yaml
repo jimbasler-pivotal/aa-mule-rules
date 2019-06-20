@@ -1,0 +1,14 @@
+name: SNAP-java-package-GradleJar
+filetype: gradle$
+target: line
+type: regex
+defaultpattern: '[{] *%s'
+advice: Refer to PCF/PKS documetation
+category: packaging
+tags:
+- value: api
+- value: jar
+- value: gradle
+- value: snap
+patterns:
+- value: jar

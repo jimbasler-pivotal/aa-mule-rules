@@ -1,0 +1,23 @@
+name: java-apacheFop-import
+filetype: java$
+target: line
+type: regex
+defaultpattern: '[ .]%s[ .({]'
+advice: Usage requires configuration remdiation
+effort: 5
+readiness: 10
+category: thirdParty
+tags:
+- value: third-party
+- value: api
+- value: fop
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/jfor_lib_base_path/
+patterns:
+- value: FopFactory
+- value: Fop
+- value: FopFactoryBuilder
+- value: FOUserAgent
+- value: setTargetResolution
+- value: setDocumentHandlerOverride
+- value: setFOEventHandlerOverride

@@ -1,0 +1,13 @@
+name: xml-mule3-file
+filetype: xml$
+target: line
+type: contains
+advice: Ensure appropriate volume mounts or services are properly configured
+effort: 0
+readiness: 10
+category: file
+tags:
+- value: api
+- value: file
+patterns:
+- value: <file:connector

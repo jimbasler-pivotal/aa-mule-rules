@@ -1,0 +1,13 @@
+name: dotnet-oracle-umanaged
+filetype: (cs$|vb$)
+target: line
+type: contains
+advice: Oracle unmanaged driver not supported. Use the managed driver instead.
+effort: 5
+readiness: 5
+category: DatabaseAccess
+tags:
+- value: Database
+patterns:
+- value: Oracle.DataAccess
+  advice: Oracle unmanaged driver not supported. Use the managed driver instead.

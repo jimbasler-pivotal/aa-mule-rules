@@ -1,0 +1,10 @@
+name: dotnet-AnonymousAuthenticationModule
+filetype: config$
+target: line
+type: contains
+advice: Refer to PCF documetation
+effort: 100
+readiness: 100
+category: security
+patterns:
+- value: <anonymousAuthentication

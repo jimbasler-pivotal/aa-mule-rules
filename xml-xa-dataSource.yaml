@@ -1,0 +1,16 @@
+name: xml-xa-dataSource
+filetype: xml$
+target: line
+type: contains
+advice: Refer to PCF documetation
+effort: 1000
+readiness: 10
+category: datasource
+tags:
+- value: api
+- value: transactions
+- value: jta
+- value: javaee
+- value: webprofile
+patterns:
+- value: <xa-datasource

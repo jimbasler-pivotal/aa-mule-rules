@@ -1,0 +1,75 @@
+name: java-swing
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ (].*
+advice: Swing applications cannot move to the cloud
+effort: 100
+readiness: 100
+category: Swing
+tags:
+- value: api
+- value: fat-client
+- value: ui
+patterns:
+- value: JApplet
+- value: JButton
+- value: JCheckBox
+- value: JCheckBoxMenuItem
+- value: JColorChooser
+- value: JComboBox
+- value: JComponent
+- value: JDesktopPane
+- value: JDialog
+- value: JEditorPane
+- value: JFileChooser
+- value: JFormattedTextField
+- value: JFormattedTextField.AbstractFormatter
+- value: JFormattedTextField.AbstractFormatterFactory
+- value: JFrame
+- value: JInternalFrame
+- value: JInternalFrame.JDesktopIcon
+- value: JLabel
+- value: JLayer
+- value: JLayeredPane
+- value: JList
+- value: JList.DropLocation
+- value: JMenu
+- value: JMenuBar
+- value: JMenuItem
+- value: JOptionPane
+- value: JPanel
+- value: JPasswordField
+- value: JPopupMenu
+- value: JPopupMenu.Separator
+- value: JProgressBar
+- value: JRadioButton
+- value: JRadioButtonMenuItem
+- value: JRootPane
+- value: JScrollBar
+- value: JScrollPane
+- value: JSeparator
+- value: JSlider
+- value: JSpinner
+- value: JSpinner.DateEditor
+- value: JSpinner.DefaultEditor
+- value: JSpinner.ListEditor
+- value: JSpinner.NumberEditor
+- value: JSplitPane
+- value: JTabbedPane
+- value: JTable
+- value: JTable.DropLocation
+- value: JTextArea
+- value: JTextField
+- value: JTextPane
+- value: JToggleButton
+- value: JToggleButton.ToggleButtonModel
+- value: JToolBar
+- value: JToolBar.Separator
+- value: JToolTip
+- value: JTree
+- value: JTree.DropLocation
+- value: JTree.DynamicUtilTreeNode
+- value: JTree.EmptySelectionModel
+- value: JViewport
+- value: JWindow

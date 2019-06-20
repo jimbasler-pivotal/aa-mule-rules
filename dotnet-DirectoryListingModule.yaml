@@ -1,0 +1,10 @@
+name: dotnet-DirectoryListingModule
+filetype: config$
+target: line
+type: contains
+advice: Verify current remediation best practice
+effort: 100
+readiness: 100
+category: security
+patterns:
+- value: directoryBrowse enabled="true"

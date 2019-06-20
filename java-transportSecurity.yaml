@@ -1,0 +1,14 @@
+name: java-transportSecurity
+filetype: java$
+target: line
+type: contains
+advice: Not compatable with PAS, change to TransportSecurity.NONE or move to PKS
+effort: 10
+readiness: 10
+category: Security
+tags:
+- value: api
+- value: transportSecurity
+- value: security-guarantee
+patterns:
+- value: TransportGuarantee.CONFIDENTIAL

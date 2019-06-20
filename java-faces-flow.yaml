@@ -1,0 +1,16 @@
+name: java-faces-flow
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ (].*
+advice: Review usage to determine how the customized state of JSF flow is being used
+  and determined if it can be externalized.
+effort: 10
+readiness: 10
+category: jsf-flow
+tags:
+- value: jsf-flow
+- value: jsf
+patterns:
+- value: FlowCallNode
+- value: FlowHandlerFactoryWrapper
