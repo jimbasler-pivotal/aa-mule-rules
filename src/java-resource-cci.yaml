@@ -1,0 +1,25 @@
+name: java-resource-cci
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ (].*
+advice: Consult with PCF documetation for configuration or use PKS
+effort: 7
+readiness: 7
+category: jca
+tags:
+- value: api
+- value: jca
+- value: resource-adapter
+patterns:
+- value: createInteraction
+- value: getEISProductName
+- value: getEISProductVersion
+- value: getAdapterName
+- value: getAdapterShortDescription
+- value: getAdapterVersion
+- value: getInteractionSpecsSupported
+- value: getSpecVersion
+- value: supportsExecuteWithInputAndOutputRecord
+- value: supportsExecuteWithInputRecordOnly
+- value: supportsLocalTransactionDemarcation

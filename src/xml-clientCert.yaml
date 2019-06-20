@@ -1,0 +1,15 @@
+name: xml-clientCert
+filetype: xml$
+target: line
+type: contains
+advice: Avoid reliance on SSL
+effort: 5
+readiness: 10
+category: security
+tags:
+- value: api
+- value: certificates
+- value: auth
+- value: security
+patterns:
+- value: <auth-method>CLIENT-CERT

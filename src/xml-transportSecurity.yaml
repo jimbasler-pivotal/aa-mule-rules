@@ -1,0 +1,14 @@
+name: xml-transportSecurity
+filetype: xml$
+target: line
+type: contains
+advice: Change to NONE
+effort: 2
+readiness: 10
+category: security
+tags:
+- value: api
+- value: security
+- value: webapp
+patterns:
+- value: <transport-guarantee>CONFIDENTIAL

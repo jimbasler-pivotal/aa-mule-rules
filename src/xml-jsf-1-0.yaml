@@ -1,0 +1,13 @@
+name: xml-jsf-1-0
+filetype: xml$
+target: line
+type: contains
+advice: Refer to PCF documetation
+effort: 1000
+category: jsf
+tags:
+- value: api
+- value: jsf
+- value: webapp
+patterns:
+- value: web-facesconfig_1_0.dtd

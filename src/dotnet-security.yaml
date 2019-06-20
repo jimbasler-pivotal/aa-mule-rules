@@ -1,0 +1,15 @@
+name: dotnet-security
+filetype: (cs$|vb$)
+target: line
+type: contains
+advice: Relying on Windows certificate stores is problematic in a cloud environment.  Ensure
+  that you either load the certificates you need into the store Just-in-Time or consider
+  refactoring your code to lookup certificates from the environment or another external
+  service.
+effort: 3
+readiness: 10
+category: Security
+tags:
+- value: api
+patterns:
+- value: X509Store

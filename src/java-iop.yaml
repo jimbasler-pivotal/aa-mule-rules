@@ -1,0 +1,22 @@
+name: java-iop
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ (.].*
+advice: Remove Method Invocations are not cloud native. Move to cloud friendly alternatives
+  such as REST endpoints.
+effort: 100
+readiness: 6
+category: iop
+tags:
+- value: api
+- value: ejb
+- value: non-standard-protocol
+patterns:
+- value: PortableRemoteObject
+- value: CodecFactory
+- value: CodecOperations
+- value: TransactionService
+- value: ServiceContext
+- value: TaggedComponent
+- value: TaggedProfile

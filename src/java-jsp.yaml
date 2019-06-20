@@ -1,0 +1,39 @@
+name: java-jsp
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ (].*
+advice: While a lot of replatforming work involves web services, you can also host
+  legacy Java Web applications with JSPs on PCF. This recipe sets forth the steps
+  to do so. Note that to support JSP’s, this recipe will have spring boot build a
+  executable war file, not a jar. Refer to cookbook URIs
+effort: 2
+readiness: 5
+category: jsp
+tags:
+- value: api
+- value: ui
+- value: jsp
+- value: webcontainer
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/how-to-deploy-jsps-to-pcf/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/legacylib_springcontext/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/refactor-jsp/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/jsp-compile/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/jsp-spring-boot-limitations/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/spring/jsp_placement_bootwar/
+patterns:
+- value: TagSupport
+- value: JspException
+- value: BodyContent
+- value: HttpJspPage
+- value: JspApplicationContext
+- value: JspPage
+- value: JspContext
+- value: JspEngineInfo
+- value: JspFactory
+- value: JspWriter
+- value: PageContext
+- value: JspException
+- value: JspTagException
+- value: SkipPageException

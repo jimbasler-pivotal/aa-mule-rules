@@ -1,0 +1,13 @@
+name: xml-myfaces
+filetype: xml$
+target: line
+type: contains
+advice: Refer to PCF documetation
+effort: 5
+readiness: 2
+category: myfaces
+tags:
+- value: api
+- value: jsf
+patterns:
+- value: org.apache.myfaces

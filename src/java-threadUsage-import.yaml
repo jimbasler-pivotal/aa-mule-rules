@@ -1,0 +1,19 @@
+name: java-threadUsage-import
+filetype: (jsp$|java$)
+target: line
+type: regex
+defaultpattern: ^.*import(\s*|=")%s.*$
+advice: Use Managed Executor
+effort: 10
+readiness: 10
+category: threading
+tags:
+- value: api
+- value: deprecated
+recipes:
+- uri: http://www14.software.ibm.com/webapp/wsbroker/redirect?version=phil&product=was-libcore-mp&topic=twlp_config_managedexecutor
+- uri: https://docs.oracle.com/javaee/7/api/javax/enterprise/concurrent/ManagedExecutorService.html
+- uri: http://www14.software.ibm.com/webapp/wsbroker/redirect?version=phil&product=was-nd-mp&topic=rwlp_feature_concurrent-1.0
+patterns:
+- value: java.lang.Thread
+- value: java.lang.Runnable

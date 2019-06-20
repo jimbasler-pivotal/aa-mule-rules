@@ -1,0 +1,15 @@
+name: SNAP-java-package-Gradle
+filetype: gradle$
+target: line
+type: regex
+defaultpattern: apply\s*plugin:\s*['']%s['']
+advice: Refer to PCF/PKS documetation
+effort: 100
+category: packaging
+tags:
+- value: api
+- value: ear
+- value: gradle
+- value: snap
+patterns:
+- value: ear

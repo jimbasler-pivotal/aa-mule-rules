@@ -1,0 +1,11 @@
+name: SNAP-build-Gradle
+filetype: gradle$
+target: file
+type: simple-text
+advice: Align with standard build system
+category: buildSystem
+tags:
+- value: gradle
+- value: snap
+patterns:
+- value: build.gradle

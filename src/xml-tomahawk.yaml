@@ -1,0 +1,14 @@
+name: xml-tomahawk
+filetype: xml$
+target: line
+type: contains
+advice: Refer to PCF documetation
+effort: 600
+readiness: 200
+category: tomahawk
+tags:
+- value: jsf
+- value: webprofile
+- value: api
+patterns:
+- value: myfaces.apache.org/tomahawk

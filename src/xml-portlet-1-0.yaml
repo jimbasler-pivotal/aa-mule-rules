@@ -1,0 +1,14 @@
+name: xml-portlet-1-0
+filetype: xml$
+target: line
+type: contains
+advice: Refer to PCF documetation
+effort: 500
+readiness: 700
+category: version-portlet
+tags:
+- value: api
+- value: portlet
+- value: webcontainer
+patterns:
+- value: portlet-app_1_0.xsd

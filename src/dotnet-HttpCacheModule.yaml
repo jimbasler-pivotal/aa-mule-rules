@@ -1,0 +1,12 @@
+name: dotnet-HttpCacheModule
+filetype: config$
+target: line
+type: contains
+advice: The HttpCacheModule implements the IIS output cache and also the logic for
+  caching items in the http.sys cache. Set the cache size. Output cache profiles etc.
+  via configuration.
+effort: 1000
+readiness: 1000
+category: caching
+patterns:
+- value: <cacheControl

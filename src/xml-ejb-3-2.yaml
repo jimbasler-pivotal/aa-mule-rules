@@ -1,0 +1,14 @@
+name: xml-ejb-3-2
+filetype: xml$
+target: line
+type: contains
+advice: Consult with PCF documetation
+effort: 7
+readiness: 7
+category: ejb
+tags:
+- value: api
+- value: ejb-lite
+- value: javaee
+patterns:
+- value: ejb-jar_3_2.xsd

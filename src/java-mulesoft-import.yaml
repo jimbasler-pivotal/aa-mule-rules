@@ -1,0 +1,22 @@
+name: java-mulesoft-import
+filetype: (jsp$|java$)
+target: line
+type: regex
+defaultpattern: ^.*import(\s*|=")%s.*$
+advice: There are several changes required to move a Mule Project to PCF. Refer to
+  cookbook URIs
+effort: 100
+readiness: 10
+category: etl
+tags:
+- value: api
+- value: mule
+- value: etl
+- value: api-gateway
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/cxf-webservice/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/mule-to-pcf/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/mule-soft/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/spring/muletospringboot/
+patterns:
+- value: org.mule

@@ -1,0 +1,10 @@
+name: dotnet-CustomErrorModule
+filetype: config$
+target: line
+type: contains
+advice: Google customerError and cloud foundry for most current advice
+effort: 100
+readiness: 100
+category: ErrorHandling
+patterns:
+- value: <customErrors

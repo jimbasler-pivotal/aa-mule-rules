@@ -1,0 +1,18 @@
+name: java-tangosol
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ ({.<].*
+advice: Convert to redis
+effort: 10
+readiness: 6
+category: cache
+tags:
+- value: api
+- value: cache
+- value: external-services
+patterns:
+- value: getConfigurableCacheFactory
+- value: NamedCache
+- value: ReflectionExtractor
+- value: ChainedExtractor

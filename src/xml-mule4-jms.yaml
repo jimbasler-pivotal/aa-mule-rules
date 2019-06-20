@@ -1,0 +1,14 @@
+name: xml-mule4-jms
+filetype: xml$
+target: line
+type: contains
+advice: Ensure appropriate properties are set for JMS connectivity
+effort: 0
+readiness: 10
+category: jms
+tags:
+- value: api
+- value: jms
+- value: messaging
+patterns:
+- value: <jms:config

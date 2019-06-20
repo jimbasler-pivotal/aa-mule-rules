@@ -1,0 +1,14 @@
+name: xml-ehcache-Config
+filetype: xml$
+target: file
+type: contains
+advice: Consult 3rd party documentation
+effort: 50
+readiness: 10
+category: cache
+tags:
+- value: api
+- value: cache
+- value: ehcache
+patterns:
+- value: ehcache.xml

@@ -1,0 +1,16 @@
+name: java-messageDrivenBeans
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*@%s.*$
+advice: Consult PCF documentation
+effort: 7
+readiness: 10
+category: mdb
+tags:
+- value: api
+- value: annotations
+- value: lookup
+- value: ejb
+patterns:
+- value: EJB\(lookup

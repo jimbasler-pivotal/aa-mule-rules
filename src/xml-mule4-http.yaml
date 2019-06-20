@@ -1,0 +1,14 @@
+name: xml-mule4-http
+filetype: xml$
+target: line
+type: contains
+advice: Ensure appropriate egress policies and other properties are set for HTTP connectivity
+effort: 0
+readiness: 10
+category: http
+tags:
+- value: api
+- value: http
+patterns:
+- value: <http:listener-config
+- value: <http:request-config

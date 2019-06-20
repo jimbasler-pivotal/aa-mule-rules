@@ -1,0 +1,14 @@
+name: xml-mule3-oauth
+filetype: xml$
+target: line
+type: contains
+advice: Ensure appropriate properties are set for OAuth provider
+effort: 0
+readiness: 10
+category: oauth
+tags:
+- value: api
+- value: oauth
+- value: security
+patterns:
+- value: xmlns:oauth2-provider="http://www.mulesoft.org/schema/mule/oauth2-provider

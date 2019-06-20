@@ -1,0 +1,15 @@
+name: docker-dockerFile
+filetype: $
+target: file
+type: simple-text
+advice: Determine if PKS is more prescriptive
+effort: 5
+readiness: 1000
+category: Docker
+tags:
+- value: Docker
+- value: config
+recipes:
+- uri: https://spring.io/blog/2018/11/08/spring-boot-in-a-container
+patterns:
+- value: Dockerfile

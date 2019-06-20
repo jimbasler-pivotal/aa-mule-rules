@@ -1,0 +1,13 @@
+name: java-jks
+filetype: jks$
+target: file
+type: regex
+effort: 7
+readiness: 7
+category: security
+tags:
+- value: security
+- value: jks
+- value: mutual-auth
+patterns:
+- value: .*\.jks

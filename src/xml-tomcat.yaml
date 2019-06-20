@@ -1,0 +1,31 @@
+name: xml-tomcat
+filetype: xml$
+target: file
+type: simple-text
+advice: There are several issues with configuring Tomcat to run on PAS. Refer to cookbook
+  URIs
+effort: 100
+category: Tomcat
+tags:
+- value: file
+- value: appprofile
+- value: tomcat
+- value: api
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/client/tomcat-ide-server-configuration/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/client/troubleshooting-apache-tomcat-servlet-startup/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/general/tomcat-jdbc-pool/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/general/tomcat-gc-measurement/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/general/tomcat-context-path/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/custom-context-jarscanner-filter/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/customizing-java-buildpack-tomcat/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/embedded-tomcat/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/configure-resource-in-tomee-buildpack/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/specify-webapp-root-context/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/persistent-session/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/javaee/migratingjavaeeappstothecloud/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/spring/configuring_connection_pool/
+patterns:
+- value: configure.xml
+- value: context.xml
+- value: server.xml

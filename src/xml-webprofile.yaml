@@ -1,0 +1,24 @@
+name: xml-webprofile
+filetype: xml$
+target: file
+type: simple-text
+advice: Web application config file
+effort: 50
+readiness: 1000
+category: config
+tags:
+- value: api
+- value: javaee
+- value: webprofile
+recipes:
+- uri: https://app-transformation-cookbook-internal.cfapps.io/client/web-xml-to-java-webconfiguration-class/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/general/servlet-filter/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/general/servlet-registration/
+- uri: https://app-transformation-cookbook-internal.cfapps.io/replatforming/convert_webxml_spring/
+patterns:
+- value: persistence.xml
+  tag: jpa
+- value: web.xml
+  tag: webapp
+- value: applicationContext.xml
+  tag: FileSystemXmlApplicationContext

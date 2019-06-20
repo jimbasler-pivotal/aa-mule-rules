@@ -1,0 +1,16 @@
+name: xml-ejb-mdb-import
+filetype: xml$
+target: line
+type: contains
+advice: Refer to PCF documentation
+effort: 7
+readiness: 7
+category: MDB
+tags:
+- value: MessageDriven
+- value: ejb
+- value: javaee
+- value: fullprofile
+- value: api
+patterns:
+- value: MessageDriven

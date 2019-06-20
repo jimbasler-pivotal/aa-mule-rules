@@ -1,0 +1,16 @@
+name: dotnet-windowsRegistry
+filetype: (cs$|vb$)
+target: line
+type: regex
+defaultpattern: ^.*%s.*
+advice: External configurations should be made available by environment variables
+  or some other external service such as Spring Cloud Config Server.  App should have
+  no dependencies on OS registry.
+effort: 100
+readiness: 100
+category: AccessingRegistry
+tags:
+- value: api
+patterns:
+- value: RegistryKey
+- value: Registry

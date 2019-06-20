@@ -1,0 +1,16 @@
+name: SNAP-SQL
+filetype: java$
+target: line
+type: regex
+defaultpattern: ^.*[ .]%s[ (].*
+advice: Refer to PCF/PKS documetation
+effort: 10
+category: jdbc
+tags:
+- value: api
+- value: jdbc
+- value: sql
+- value: snap
+patterns:
+- value: StoredProcedureQuery
+- value: CallableStatement
